@@ -1,0 +1,111 @@
+
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
+import java.math.BigInteger;
+
+public class Patient {
+    private String name;
+    private String surname;
+    private BigInteger pesel;
+
+    public String getName() {
+        return this.name;
+    }
+
+    public String getSurname() {
+        return this.surname;
+    }
+
+    public BigInteger getPesel() {
+        return this.pesel;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public void setPesel(BigInteger pesel) {
+        this.pesel = pesel;
+    }
+
+    public boolean equals(Object o) {
+        if (o == this) {
+            return true;
+        } else if (!(o instanceof Patient)) {
+            return false;
+        } else {
+            Patient other = (Patient)o;
+            if (!other.canEqual(this)) {
+                return false;
+            } else {
+                label47: {
+                    Object this$name = this.getName();
+                    Object other$name = other.getName();
+                    if (this$name == null) {
+                        if (other$name == null) {
+                            break label47;
+                        }
+                    } else if (this$name.equals(other$name)) {
+                        break label47;
+                    }
+
+                    return false;
+                }
+
+                Object this$surname = this.getSurname();
+                Object other$surname = other.getSurname();
+                if (this$surname == null) {
+                    if (other$surname != null) {
+                        return false;
+                    }
+                } else if (!this$surname.equals(other$surname)) {
+                    return false;
+                }
+
+                Object this$pesel = this.getPesel();
+                Object other$pesel = other.getPesel();
+                if (this$pesel == null) {
+                    if (other$pesel != null) {
+                        return false;
+                    }
+                } else if (!this$pesel.equals(other$pesel)) {
+                    return false;
+                }
+
+                return true;
+            }
+        }
+    }
+
+    protected boolean canEqual(Object other) {
+        return other instanceof Patient;
+    }
+
+    public int hashCode() {
+        boolean PRIME = true;
+        int result = 1;
+        Object $name = this.getName();
+        result = result * 59 + ($name == null ? 43 : $name.hashCode());
+        Object $surname = this.getSurname();
+        result = result * 59 + ($surname == null ? 43 : $surname.hashCode());
+        Object $pesel = this.getPesel();
+        result = result * 59 + ($pesel == null ? 43 : $pesel.hashCode());
+        return result;
+    }
+
+    public String toString() {
+        return "Patient(name=" + this.getName() + ", surname=" + this.getSurname() + ", pesel=" + this.getPesel() + ")";
+    }
+
+    public Patient(String name, String surname, BigInteger pesel) {
+        this.name = name;
+        this.surname = surname;
+        this.pesel = pesel;
+    }
+}
